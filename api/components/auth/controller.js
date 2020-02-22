@@ -10,6 +10,17 @@ module.exports = function(injectedStore) {
 
     async function login(username, password) {
         const data = await store.query(TABLA, { username: username });
+        console.log(username)
+        console.log(password)
+        return bcrypt.compare(password, data.password)
+            .then(sonIguales => {
+                if (sonIguales === true) {
+                    // Generar token;
+                    return auth.sign({...data })
+                } else {
+                    throw new Error('Informacion invalida');
+                }
+            });
 
         /*         return bcrypt.compare(password, data.password)
                     .then(sonIguales => {
@@ -20,18 +31,18 @@ module.exports = function(injectedStore) {
                             throw new Error('Información inválida')
                         }
                     }) */
-
         // Busca en la tabla todos los valores "username"
+        /*        const match = await bcrypt.compare(password, data.password);
+               if (!match) {
+                   thrownewError("Informacion invalida");
+               }
+               //Generar token
+               return auth.sign({...data }); */
 
-        const match = await bcrypt.compare(password, data.password);
-        if (!match) {
-            thrownewError("Informacion invalida");
-        }
-        //Generar token
-        return auth.sign({...data });
     }
 
     async function upsert(data) {
+        console.log('Datos de data', data)
         const authData = {
             id: data.id,
         }
@@ -44,7 +55,11 @@ module.exports = function(injectedStore) {
             authData.password = await bcrypt.hash(data.password, 5);
         }
 
-        return store.upsert(TABLA, authData, isNew = 1);
+        if (data.autorization) {
+            console.log(data);
+        }
+
+        return store.upsert(TABLA, authData);
     }
 
     return {
