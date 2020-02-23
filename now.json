@@ -2,11 +2,11 @@
     "version": 2,
     "env": {
         "NODE_ENV": "production",
-        "MYSQL_DB_HOST": "remotemysql.com",
-        "MYSQL_DB_USER": "U3NJDpQoxN",
-        "MYSQL_DB_PASSWORD": "A4znmY23kh",
-        "MYSQL_DATABASE": "U3NJDpQoxN",
-        "AUTH_JWT_SECRET": "notasecret"
+        "MYSQL_HOST": "remotemysql.com",
+        "MYSQL_USER": "U3NJDpQoxN",
+        "MYSQL_PASSWORD": "A4znmY23kh",
+        "MYSQL_DB": "U3NJDpQoxN",
+        "JWT_SECRET": "notasecret"
 
     },
     "builds": [{
