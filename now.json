@@ -3,14 +3,11 @@
     "env": {
         "NODE_ENV": "production",
         "MYSQL_DB_HOST": "remotemysql.com",
-        "MYSQL_DB_PORT": "3001",
         "MYSQL_DB_USER": "U3NJDpQoxN",
         "MYSQL_DB_PASSWORD": "A4znmY23kh",
         "MYSQL_DATABASE": "U3NJDpQoxN",
-        "MYSQL_SERVICE_HOST": "127.0.0.1",
-        "AUTH_JWT_SECRET": "notasecret",
-        "API_PORT": "3002",
-        "POST_PORT": "3003"
+        "AUTH_JWT_SECRET": "notasecret"
+
     },
     "builds": [{
             "src": "api/index.js",
