@@ -9,7 +9,7 @@ const router = express.Router();
 // Routes 
 router.get('/', list);
 router.post('/follow/:id', secure('follow'), follow);
-router.get('/:/following', following);
+router.get('/:id/following', following);
 router.get('/:id', get);
 router.post('/', upsert);
 router.put('/', secure('update'), upsert);
