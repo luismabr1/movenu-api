@@ -8,6 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 const user = require('./components/user/network.js');
 const auth = require('./components/auth/network.js');
+
 const errors = require('../network/errors');
 
 const swaggerDoc = require('./swagger.json');
