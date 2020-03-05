@@ -6,6 +6,9 @@ module.exports = {
     post: {
         port: process.env.POST_PORT || 3003
     },
+    project: {
+        port: process.env.PROJECT_PORT || 3005
+    },
     jwt: {
         secret: process.env.JWT_SECRET || 'nosecret'
     },
