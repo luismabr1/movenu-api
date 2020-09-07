@@ -52,7 +52,7 @@ module.exports = {
     redis: {
         host: process.env.REDIS_HOST || 'redis-16916.c85.us-east-1-2.ec2.cloud.redislabs.com',
         port: process.env.REDIS_PORT || '16916',
-        password: process.env.REDIS_PASS || ' alMzqCm8VetjEQsPITspXuSZBdv0GCsW',
+        password: process.env.REDIS_PASS || 'alMzqCm8VetjEQsPITspXuSZBdv0GCsW',
         }
 }
 
