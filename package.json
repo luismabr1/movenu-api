@@ -1,7 +1,7 @@
 {
-  "name": "cursopracticonode",
+  "name": "movenu-api",
   "version": "1.0.0",
-  "description": "practica de node",
+  "description": "api en node",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
