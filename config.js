@@ -22,17 +22,29 @@ module.exports = {
             database: process.env.MYSQL_DB || 'movenu_db',
 
         }, */
-    mysql: {
-        host: process.env.MYSQL_HOST || 'remotemysql.com',
 
-        user: process.env.MYSQL_USER || 'U3NJDpQoxN',
+    ho: ocess.env.MYSQL_HOST || 'remotemysql.com',
 
-        password: process.env.MYSQL_PASS || '6NlXD034oS',
+    user: process.env.MYSQL_USER || 'U3NJDpQoxN',
 
-        database: process.env.MYSQL_DB || 'U3NJDpQoxN',
+    : process.env.MYSQL_PASS || '6NlXD034oS',
 
-    },
-    mysqlService: {
+    daba: process.env.MYSQL_DB || 'U3NJDpQoxN',
+
+},
+},
+},
+/*     mysql: {
+                host: process.env.MYSQL_HOST || 'localhost',
+
+                user: process.env.MYSQL_USER || 'id11735746_lbrito',
+
+                password: process.env.MYSQL_PASS || 'balt0atena',
+
+                database: process.env.MYSQL_DB || 'id11735746_movenu_db',
+
+            }, */
+mysqlService: {
         host: process.env.MYSQL_SRV_HOST || '127.0.0.1',
         port: process.env.MYSQL_SRV_PORT || 3001,
     },
